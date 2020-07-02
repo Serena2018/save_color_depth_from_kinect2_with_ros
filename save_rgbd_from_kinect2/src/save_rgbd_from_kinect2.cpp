@@ -98,7 +98,7 @@ int main(int argc,char** argv)
                   fout_rgb<<os_rgb.str()<<",rgb/"<<os_rgb.str()<<".png\n";
                   successed_flag1=0;
 				//   imshow("image color",rgb);
-				  cout<<"rgb -- time:  " <<  time_val.tv_sec<<"."<<time_val.tv_usec<<endl;
+				  cout<<"rgb -- time:  " <<  time_val.tv_sec<<"."<<setiosflags(ios::fixed)<<setprecision(6)<<std::setfill('0')<<setw(6)<<time_val.tv_usec<<endl;
 				//    waitKey(1);
 
             }
@@ -113,7 +113,7 @@ int main(int argc,char** argv)
                 fout_depth<<os_dep.str()<<",depth/"<<os_dep.str()<<".png\n";
 				successed_flag2=0;
 				//   imshow("image depth",depth);
-				cout<<"depth -- time:" <<  time_val.tv_sec<<"."<<time_val.tv_usec<<endl;
+				cout<<"depth -- time:" <<  time_val.tv_sec<<"."<<setiosflags(ios::fixed)<<setprecision(6)<<std::setfill('0')<<setw(6)<<time_val.tv_usec<<endl;
 
              }
            
